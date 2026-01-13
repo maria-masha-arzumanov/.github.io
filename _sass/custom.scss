@@ -21,3 +21,12 @@ body {
 a {
   color: var(--link-color); /* Links in main content */
 }
+
+/* Make sidebar avatar a circle */
+.author-profile img {
+  border-radius: 50%;       /* Circle shape */
+  width: 120px;             /* Adjust avatar size */
+  height: 120px;
+  object-fit: cover;        /* Crop image nicely */
+  border: 2px solid white;  /* Optional: white border to stand out */
+}
