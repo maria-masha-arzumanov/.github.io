@@ -167,47 +167,83 @@ body {
 }
 
 /* ===== Fix weird avatar rings / outlines ===== */
-/* Kill any theme-added pseudo-element rings */
+/* ===============================
+   FINAL OVERRIDES (keep at bottom)
+   =============================== */
+
+/* --- Avatar: single clean circle (no weird rings) --- */
+.author__avatar {
+  width: 240px !important;
+  height: 240px !important;
+  border-radius: 50% !important;
+  overflow: hidden !important;
+
+  /* choose ONE ring style */
+  border: 2px solid rgba(255,255,255,0.65) !important;
+
+  /* kill theme effects */
+  box-shadow: none !important;
+  outline: none !important;
+  background: transparent !important;
+}
+
 .author__avatar::before,
-.author__avatar::after,
-.author__avatar img::before,
-.author__avatar img::after {
+.author__avatar::after {
   content: none !important;
   display: none !important;
 }
 
-/* Ensure only ONE border exists (the wrapper), and the image has none */
-.author__avatar {
-  box-shadow: none !important;
-  outline: none !important;
-}
-
 .author__avatar img {
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
+
   border: 0 !important;
-  outline: none !important;
+  border-radius: 50% !important;
   box-shadow: none !important;
+  outline: none !important;
+
+  object-fit: cover !important;
+  object-position: center 35% !important;
 }
 
-/* ===== Remove footer (Sitemap gray block) ===== */
+/* If the theme adds a border to images in the sidebar, kill it */
+.sidebar img {
+  border: 0 !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* --- Remove footer / sitemap block --- */
 .page__footer,
-footer,
-.footer {
+.page__footer-follow,
+.page__footer-copyright,
+.site-footer,
+footer {
   display: none !important;
 }
 
-/* ===== Move About content left (less centered) ===== */
+/* --- Move About content left (closer to sidebar) --- */
+#main {
+  max-width: none !important;
+}
+
 .page__inner-wrap {
-  max-width: none !important;     /* stop centering constraints */
-  margin-left: 0 !important;
-  margin-right: 0 !important;
+  max-width: 900px !important;   /* set a readable width */
+  margin: 0 !important;          /* stop centering */
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
-.page__content,
-.page__title {
+/* Pull content closer to sidebar */
+.page,
+.initial-content,
+#main {
+  padding-left: 1.25rem !important;  /* reduce if you want closer */
+}
+
+/* Ensure text is left-aligned */
+.page__title,
+.page__content {
   text-align: left !important;
-}
-
-/* Reduce the left padding so content sits closer to the sidebar */
-.page {
-  padding-left: 2rem !important;  /* try 1.5rem if you want even closer */
 }
