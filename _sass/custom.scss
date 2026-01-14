@@ -105,3 +105,64 @@ body {
   margin-top: 0.75rem;
 }
 
+/* ===============================
+   Sidebar layout FIX (Minimal Mistakes overrides)
+   =============================== */
+
+/* 1) Force the sticky sidebar container to behave like our fixed sidebar */
+.sidebar,
+.sidebar.sticky {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  height: auto !important;      /* bottom controls height */
+  width: 280px !important;
+
+  margin: 0 !important;
+  padding: 1.5rem 1rem !important;
+
+  overflow-y: auto !important;
+  z-index: 2000 !important;
+
+  background: var(--sidebar-bg) !important;
+  color: white !important;
+}
+
+/* 2) Remove the theme's centering constraints so content doesn't push sidebar around */
+#main,
+.main,
+.initial-content,
+.page {
+  max-width: none !important;
+}
+
+/* 3) Push ALL main content to the right of the sidebar */
+.initial-content,
+.page,
+#main {
+  margin-left: 280px !important;  /* must match sidebar width */
+}
+
+/* 4) Keep the background consistently light blue (prevents white gaps) */
+.initial-content,
+.page,
+#main {
+  background: var(--page-bg) !important;
+}
+
+@media (max-width: 900px) {
+  .sidebar,
+  .sidebar.sticky {
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+  }
+
+  .initial-content,
+  .page,
+  #main {
+    margin-left: 0 !important;
+  }
+}
+
