@@ -22,8 +22,16 @@ a {
   color: var(--link-color);
 }
 
-/* Circular avatar */
+.author__avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
 .author__avatar img {
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   object-fit: cover;
 }
