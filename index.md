@@ -7,6 +7,8 @@ permalink: /
 
 # About
 
-Hi! I’m Maria Arzumanov, but you can call me Masha. I'm a PhD student in the [Political Science Department](https://polisci.ucla.edu/) at UCLA.  
+Hi! I’m Maria Arzumanov, but you can call me Masha. I'm a PhD student at the [Political Science Department](https://polisci.ucla.edu/) at UCLA, where I study gender and the political economy of reproductive healthcare in the US.
+
+Currently, I am an an affiliate of the [California Center for Population Research](https://ccpr.ucla.edu/), and a Graduate Student Researcher (GSR) at the [Center for Impact](https://www.anderson.ucla.edu/about/centers/impactanderson). My work has been partially funded by the (Institute for Humane Studies)[https://www.theihs.org/].
 
 You can find my [CV](https://maria-masha-arzumanov.github.io/files/FellowshipCV.pdf) and my [research](/research/) here.
