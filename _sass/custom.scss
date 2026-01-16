@@ -6,6 +6,9 @@
   --sidebar-bg: #7d92cc;  /* softened, muted blue */
   --text: #1f2937;
   --link: #1a4fb3;
+
+  /* NEW: one source of truth for sidebar width */
+  --sidebar-width: 340px; /* try 320–380 */
 }
 
 /* Make the whole page light blue */
@@ -36,7 +39,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 280px;
+  width: var(--sidebar-width);
   height: 100vh;
 
   margin: 0 !important;
@@ -51,7 +54,7 @@ body {
 /* Push main content right of sidebar */
 .page,
 .initial-content {
-  margin-left: 280px;
+  margin-left: var(--sidebar-width);
   background: var(--page-bg);
 }
 
@@ -92,12 +95,25 @@ body {
   border: 2px solid rgba(255,255,255,0.7);
 }
 
+/* NEW: center sidebar author block consistently on all monitors */
+.sidebar .author__content,
+.sidebar .author__name,
+.sidebar .author__bio,
+.sidebar .author__urls-wrapper {
+  text-align: center !important;
+}
+
+.sidebar .author__avatar {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: block !important;
+}
+
 .author__avatar img {
   max-width: none !important;
   width: 100% !important;
   height: 100% !important;
 }
-
 
 /* Optional: tighten name spacing */
 .author__name {
@@ -115,8 +131,8 @@ body {
   top: 0 !important;
   left: 0 !important;
   bottom: 0 !important;
-  height: auto !important;      /* bottom controls height */
-  width: 280px !important;
+  height: auto !important;
+  width: var(--sidebar-width) !important;
 
   margin: 0 !important;
   padding: 1.5rem 1rem !important;
@@ -140,7 +156,7 @@ body {
 .initial-content,
 .page,
 #main {
-  margin-left: 280px !important;  /* must match sidebar width */
+  margin-left: var(--sidebar-width) !important;
 }
 
 /* 4) Keep the background consistently light blue (prevents white gaps) */
@@ -150,6 +166,7 @@ body {
   background: var(--page-bg) !important;
 }
 
+/* Responsive: collapse sidebar on smaller screens */
 @media (max-width: 900px) {
   .sidebar,
   .sidebar.sticky {
@@ -165,7 +182,6 @@ body {
   }
 }
 
-/* ===== Fix weird avatar rings / outlines ===== */
 /* ===============================
    FINAL OVERRIDES (keep at bottom)
    =============================== */
@@ -177,10 +193,8 @@ body {
   border-radius: 50% !important;
   overflow: hidden !important;
 
-  /* choose ONE ring style */
   border: 2px solid rgba(255,255,255,0.65) !important;
 
-  /* kill theme effects */
   box-shadow: none !important;
   outline: none !important;
   background: transparent !important;
@@ -204,6 +218,7 @@ body {
 
   object-fit: cover !important;
   object-position: center 35% !important;
+  max-width: none !important; /* ensure no theme max-width constraint */
 }
 
 /* If the theme adds a border to images in the sidebar, kill it */
@@ -228,8 +243,8 @@ footer {
 }
 
 .page__inner-wrap {
-  max-width: 900px !important;   /* set a readable width */
-  margin: 0 !important;          /* stop centering */
+  max-width: 900px !important;
+  margin: 0 !important;
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
@@ -238,7 +253,7 @@ footer {
 .page,
 .initial-content,
 #main {
-  padding-left: 1.25rem !important;  /* reduce if you want closer */
+  padding-left: 1.25rem !important;
 }
 
 /* Ensure text is left-aligned */
