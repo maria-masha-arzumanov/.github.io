@@ -291,3 +291,27 @@ footer {
   margin-left: var(--sidebar-width) !important;
 }
 
+/* ===== Override theme's sidebar max-width clamp ===== */
+.sidebar,
+.sidebar.sticky {
+  width: var(--sidebar-width) !important;
+  max-width: var(--sidebar-width) !important;  /* <-- THIS fixes it */
+  min-width: var(--sidebar-width) !important;
+  float: none !important;
+  margin-right: 0 !important;
+}
+
+/* Also override the theme's media-query rule directly */
+@media (min-width: 80em) {
+  .sidebar {
+    max-width: var(--sidebar-width) !important;
+  }
+}
+
+@media (min-width: 57.8125em) {
+  .sidebar {
+    width: var(--sidebar-width) !important;    /* override 15.25% */
+    margin-right: 0 !important;                /* override 1.69% */
+  }
+}
+
