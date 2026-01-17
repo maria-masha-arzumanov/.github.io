@@ -23,6 +23,7 @@ repository: "maria-masha-arzumanov/maria-masha-arzumanov.github.io"
 
 include:
   - images
+  - _pages
 
 # Author / Sidebar info
 author:
