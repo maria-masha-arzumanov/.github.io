@@ -21,6 +21,7 @@ You can find my [CV](https://maria-masha-arzumanov.github.io/files/FellowshipCV.
 American Politics, Methods, Political Economy, Gender
 
 ## Working Papers
-- Abortion Restrictions and Electoral Turnout: The Effect of Dobbs v. Jackson on Women’s Voting
-- Women Leaders and the Gender Pay Gap in Municipal Government _(with Julia Payson)_
-- Green Gold and Gendered Political Corruption: The Effect of Agricultural Revenue Shocks on Bureaucratic Competence
+
+- **[Abortion Restrictions and Electoral Turnout: The Effect of Dobbs v. Jackson on Women’s Voting](https://maria-masha-arzumanov.github.io/files/NYU_MPSA_Field_Paper_Draft_4_0%20(3).pdf)**
+
+- **[Women Leaders and the Gender Pay Gap in Municipal Government](https://maria-masha-arzumanov.github.io/gender_pay_gap%20(2).pdf)** _(with Julia Payson)_
