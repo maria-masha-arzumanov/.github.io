@@ -2,6 +2,49 @@
 
 <!-- start custom head snippets -->
 
+<!-- Mobile responsiveness -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+  @media screen and (max-width: 768px) {
+    html,
+    body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    .initial-content,
+    .page,
+    .page__inner-wrap,
+    .page__content,
+    .archive {
+      display: block !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+
+    .sidebar {
+      display: none !important;
+    }
+
+    img,
+    iframe,
+    embed,
+    object {
+      max-width: 100%;
+      height: auto;
+    }
+
+    a {
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+    }
+  }
+</style>
+
 <!-- Support for Academicons -->
 <link rel="stylesheet" href="{{ base_path }}/assets/css/academicons.css"/>
 
@@ -11,7 +54,7 @@
 <link rel="icon" type="image/png" href="{{ base_path }}/images/favicon-32x32.png" sizes="32x32"/>
 <link rel="icon" type="image/png" href="{{ base_path }}/images/favicon-192x192.png" sizes="192x192"/>
 <link rel="manifest" href="{{ base_path }}/images/manifest.json"/>
-<link rel="icon" href="/images/favicon.ico"/>
+<link rel="icon" href="{{ base_path }}/images/favicon.ico"/>
 <meta name="theme-color" content="#ffffff"/>
 
 <!-- end custom head snippets -->
