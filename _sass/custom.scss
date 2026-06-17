@@ -319,3 +319,82 @@ footer {
 .sidebar.sticky {
   padding-top: 70px !important;
 }
+
+/* ===============================
+   MOBILE FIX — must stay at very bottom
+   =============================== */
+
+@media screen and (max-width: 900px) {
+  :root {
+    --sidebar-width: 0px;
+  }
+
+  html,
+  body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    background: var(--page-bg) !important;
+  }
+
+  /* Stop desktop sidebar offset on mobile */
+  #main,
+  .main,
+  .initial-content,
+  .page,
+  .page__inner-wrap,
+  .page__content,
+  .archive,
+  .layout--single {
+    margin-left: 0 !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    float: none !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Make sidebar normal/mobile-sized instead of fixed 400px */
+  .sidebar,
+  .sidebar.sticky {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    bottom: auto !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    height: auto !important;
+
+    margin: 0 !important;
+    padding: 1.5rem 1rem !important;
+
+    float: none !important;
+    display: block !important;
+    box-sizing: border-box !important;
+  }
+
+  .author__avatar {
+    width: 160px !important;
+    height: 160px !important;
+  }
+
+  img,
+  iframe,
+  embed,
+  object {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  a {
+    overflow-wrap: break-word !important;
+    word-wrap: break-word !important;
+  }
+}
